@@ -1,0 +1,218 @@
+/* 전체 페이지 스타일 */
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* 제목 스타일 */
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 헤더 컨테이너 스타일 */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #2d2d2d;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* 년도 선택 박스 컨테이너 */
+.year-select {
+    flex: 0 0 250px;
+}
+
+/* 버튼 그룹 스타일 */
+.button-group {
+    display: flex;
+    gap: 12px;
+}
+
+/* Select 박스 스타일 */
+select {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #404040;
+    border-radius: 8px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+select:hover {
+    background-color: #404040;
+    border-color: #505050;
+}
+
+select:focus {
+    outline: none;
+    border-color: #606060;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.1);
+}
+
+/* 버튼 스타일 */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2c5282;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 90px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: #3182ce;
+    transform: translateY(-1px);
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: #2d2d2d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+/* 테이블 헤더 */
+th {
+    background-color: #2c5282;
+    color: white;
+    padding: 15px 12px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+/* 테이블 셀 */
+td {
+    padding: 12px;
+    border-bottom: 1px solid #404040;
+    color: #e0e0e0;
+    text-align: center;
+}
+
+/* 과목명 열 좌측 정렬 */
+td:nth-child(4) {
+    text-align: left;
+}
+
+/* 짝수 행 배경 */
+tr:nth-child(even) {
+    background-color: #333333;
+}
+
+/* 선택된 행 스타일 */
+tr.selected {
+    background-color: #2c528250 !important;
+}
+
+/* 테이블 푸터 */
+tfoot tr {
+    background-color: #2c5282;
+    font-weight: 600;
+}
+
+tfoot td {
+    border-bottom: none;
+    color: white;
+}
+
+/* 입력 필드 스타일 */
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #404040;
+    border-radius: 6px;
+    background-color: #333333;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+input[type="number"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: #2c5282;
+    box-shadow: 0 0 0 2px rgba(44,82,130,0.2);
+}
+
+/* 체크박스 스타일 */
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: #2c5282;
+}
+
+/* F 학점 스타일 */
+.grade-f {
+    color: #fc8181;
+    font-weight: bold;
+}
+
+/* 에러 상태 스타일 */
+.input-error {
+    border-color: #fc8181 !important;
+    background-color: rgba(252,129,129,0.1) !important;
+}
+
+/* 비활성화된 입력 필드 스타일 */
+input:disabled {
+    background-color: #404040;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1024px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .year-select {
+        width: 100%;
+    }
+    
+    .button-group {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+/* 테이블 스크롤 처리 */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
