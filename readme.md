@@ -1,6 +1,7 @@
 # 학점 관리 시스템 (Grade Management System)
 
-![학점 관리 시스템](<img width="1168" alt="project-screenshot" src="https://github.com/user-attachments/assets/34107c00-6857-45e3-a7b2-820332cc4ad8">)
+![학점 관리 시스템](<img width="1168" alt="project-screenshot" src="https://github.com/user-attachments/assets/34107c00-6857-45e3-a7b2-820332cc4ad8">
+)
 
 ## 프로젝트 소개
 이 프로젝트는 대학생들의 학점을 효율적으로 관리할 수 있는 웹 기반 시스템입니다. 사용자는 과목별 점수를 입력하고 관리할 수 있으며, 총점과 학점이 자동으로 계산됩니다.
